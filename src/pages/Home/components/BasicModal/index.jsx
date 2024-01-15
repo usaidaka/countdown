@@ -34,14 +34,20 @@ export default function BasicModal() {
         <Box className={classes["modal-head"]}>
           <h1>Please, input your launching date</h1>
           <form action="" onSubmit={handleSubmit}>
-            <input
-              type="date"
-              name=""
-              id=""
-              onChange={(e) => setDate(e.target.value)}
-              min={new Date().toISOString().slice(0, -14)}
-            />
-            <input type="time" onChange={(e) => setTime(e.target.value)} />
+            <div className={classes.form}>
+              <label htmlFor="">Date</label>
+              <input
+                type="date"
+                name=""
+                id=""
+                onChange={(e) => setDate(e.target.value)}
+                min={new Date().toISOString().slice(0, -14)}
+              />
+            </div>
+            <div className={classes.form}>
+              <label htmlFor="">Time</label>
+              <input type="time" onChange={(e) => setTime(e.target.value)} />
+            </div>
             <button type="submit">Submit</button>
           </form>
         </Box>
