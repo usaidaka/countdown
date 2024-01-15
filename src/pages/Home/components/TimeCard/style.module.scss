@@ -1,0 +1,75 @@
+@import "../../../../style/base.scss";
+
+.time-container {
+  @include apply-at-sm-size {
+    gap: 0px;
+    width: 100%;
+  }
+
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  gap: 50px;
+  position: relative;
+  z-index: 3;
+
+  .time-wrapper {
+    @include flexCenterXY;
+    flex-direction: column;
+  }
+
+  .time {
+    @include apply-at-sm-size {
+      width: 60px;
+      height: 60px;
+      box-shadow: inset 0px -6px $counter-card-shadow;
+      flex-wrap: wrap;
+    }
+
+    width: 150px;
+    height: 150px;
+    @include gradientCardCounter;
+    border-radius: 10px;
+    box-shadow: inset 0px -14px $counter-card-shadow;
+    margin-bottom: 10px;
+    @include flexCenterXY;
+
+    .dot-left {
+      position: absolute;
+      left: 0;
+      width: 10px;
+      height: 20px;
+      border-top-right-radius: 150px;
+      border-bottom-right-radius: 150px;
+      background: $cut-card;
+    }
+
+    .dot-right {
+      position: absolute;
+      right: 0;
+      width: 10px;
+      height: 20px;
+      border-top-left-radius: 150px;
+      border-bottom-left-radius: 150px;
+      background: $cut-card;
+    }
+
+    > h1 {
+      @include apply-at-sm-size {
+        font-size: 40px;
+      }
+      color: $counter-color;
+      font-size: 90px;
+      @include gradientFontCounter;
+    }
+  }
+
+  h3 {
+    @include apply-at-sm-size {
+      font-size: 10px;
+    }
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: $counter-title;
+  }
+}

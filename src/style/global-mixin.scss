@@ -1,0 +1,40 @@
+@mixin flexCenterX {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexCenterY {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexCenterXY {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin fullPage {
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin gradientCardCounter {
+  background: rgb(52, 54, 79);
+  background: linear-gradient(
+    0deg,
+    rgba(52, 54, 79, 1) 50%,
+    rgba(44, 44, 68, 1) 50%
+  );
+}
+
+@mixin gradientFontCounter {
+  background: rgb(240, 96, 132);
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(240, 96, 132, 1) 50%,
+    rgba(220, 79, 115, 1) 50%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

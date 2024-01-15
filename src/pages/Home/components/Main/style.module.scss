@@ -1,0 +1,54 @@
+@import "../../../../style/base.scss";
+
+.background {
+  @include apply-at-sm-size {
+    animation: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  @include apply-at-xl-size {
+    animation: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  @include apply-at-xxl-size {
+    animation: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  z-index: 1;
+  position: absolute;
+  animation: mymove 5s linear infinite;
+
+  @keyframes mymove {
+    70% {
+      transform: translateX(90px);
+    }
+  }
+}
+
+main {
+  background-color: $main-color;
+  @include fullPage;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $font-primary;
+  position: relative;
+  width: 100vw;
+
+  > h1 {
+    text-align: center;
+    margin-top: 160px;
+    color: white;
+  }
+
+  .message {
+    text-align: center;
+    margin-top: 160px;
+    color: white;
+  }
+}
